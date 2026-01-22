@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hutan Kita: Potensi dan Pelestarian</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #4CAF50, #81C784);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #2E7D32;
+            color: white;
+            padding: 20px;
+            font-size: 2em;
+            animation: fadeIn 2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #388E3C;
+            font-size: 1.5em;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #C8E6C9;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #388E3C;
+        }
+        footer {
+            background-color: #2E7D32;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .emoji {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        🌳 Hutan Kita: Potensi dan Pelestarian 🌳
+    </header>
+
+    <section id="intro">
+        <h2>Selamat Datang di Dunia Hutan!</h2>
+        <p>Hai teman-teman! Hutan adalah rumah bagi jutaan makhluk hidup. Di sini, kita akan belajar tentang potensi hutan yang luar biasa dan bagaimana kita bisa menjaganya. Mari kita jaga hutan bersama! 🌿🐒</p>
+        <img src="https://via.placeholder.com/400x200/4CAF50/FFFFFF?text=Hutan+Hijau" alt="Hutan hijau">
+    </section>
+
+    <section id="potensi">
+        <h2>Potensi Hutan yang Mengagumkan</h2>
+        <p>Hutan bukan hanya tempat yang indah, tapi juga penuh potensi! Apa saja ya?</p>
+        <ul>
+            <li>🌳 Sumber kayu dan bahan bangunan</li>
+            <li>🍄 Obat-obatan dari tanaman hutan</li>
+            <li>🐾 Rumah bagi hewan langka seperti harimau dan orangutan</li>
+            <li>💧 Penyimpan air dan pencegah banjir</li>
+            <li>🌬️ Penyerap karbon untuk melawan perubahan iklim</li>
+        </ul>
+        <img src="https://via.placeholder.com/400x200/81C784/FFFFFF?text=Keanekaragaman+Hayati" alt="Keanekaragaman hayati">
+    </section>
+
+    <section id="pelestarian">
+        <h2>Pentingnya Pelestarian Hutan</h2>
+        <p>Hutan sedang terancam oleh penebangan liar, kebakaran, dan polusi. Jika kita tidak menjaganya, hewan-hewan akan kehilangan rumah, dan kita bisa kehabisan udara bersih! 😱 Mari kita lakukan sesuatu!</p>
+        <ul>
+            <li>♻️ Kurangi penggunaan kertas dan plastik</li>
+            <li>🌱 Tanam pohon di sekitar rumah</li>
+            <li>🚫 Jangan buang sampah sembarangan</li>
+            <li>📢 Edukasi teman dan keluarga tentang pentingnya hutan</li>
+        </ul>
+        <img src="https://via.placeholder.com/400x200/66BB6A/FFFFFF?text=Pelestarian+Hutan" alt="Pelestarian hutan">
+    </section>
+
+    <section id="daftar">
+        <h2>Daftar Orang yang Setuju Menjaga Hutan! ✍️</h2>
+        <p>Kamu setuju untuk menjaga hutan? Tulis namamu di sini! Kita akan buat daftar panjang untuk menunjukkan dukungan kita. 💪</p>
+        <form id="signupForm">
+            <input type="text" id="name" placeholder="Nama kamu" required>
+            <input type="email" id="email" placeholder="Email (opsional)">
+            <button type="submit">Tanda Tangan!</button>
+        </form>
+        <ul id="signers">
+            <!-- Daftar tanda tangan akan ditambahkan di sini -->
+        </ul>
+        <script>
+            const form = document.getElementById('signupForm');
+            const signersList = document.getElementById('signers');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const li = document.createElement('li');
+                li.textContent = name + (email ? ' (' + email + ')' : '');
+                signersList.appendChild(li);
+                form.reset();
+                alert('Terima kasih! Kamu sudah bergabung! 🌟');
+            });
+        </script>
+    </section>
+
+    <footer>
+        Dibuat dengan cinta untuk hutan. Mari jaga bumi kita! 🌍
+    </footer>
+</body>
+</html>
